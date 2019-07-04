@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CompileTemplateMetadata } from '@angular/compiler';
 
 @Component({
   selector: 'todo-list',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./todo-list.component.sass']
 })
 export class TodoListComponent implements OnInit {
-  todos: object[];
+  todos: Todo[];
   todoTitle: string;
   idForTodo: number;
 
@@ -53,5 +54,9 @@ export class TodoListComponent implements OnInit {
     // CLEAR TEXTBOX AFTER PRESSING ENTER
     this.todoTitle = '';
     this.idForTodo++;
+  }
+
+  deleteTodo(id: number): void {
+    this.todos = this.todos.filter(todo => todo.id !== id);
   }
 }
