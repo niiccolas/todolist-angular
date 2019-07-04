@@ -3,7 +3,7 @@
 
   <h1>Angular Todo-list</h1>
 
-  <input type="text" class="todo-input" placeholder="What needs to be done" [(ngModel)]="todoTitle">
+  <input type="text" class="todo-input" placeholder="What needs to be done" [(ngModel)]="todoTitle" (keyup.enter)="addTodo()">
 
   <div class="todo-item" *ngFor="let todo of todos">
     <div class="todo-item-left">
