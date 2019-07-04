@@ -1,1 +1,45 @@
-<p>todo-list works!</p>
+<div class="wrapper">
+  <img id="logo" src="./assets/png/001-palm.png" alt="">
+
+  <h1>Angular Todo-list</h1>
+
+  <input type="text" class="todo-input" placeholder="What needs to be done" [(ngModel)]="todoTitle">
+
+  <div class="todo-item" *ngFor="let todo of todos">
+    <div class="todo-item-left">
+      <input type="checkbox">
+      <div class="todo-item-label">{{ todo.title }}</div>
+    </div>
+    <div class="remove-item">
+      &times;
+    </div>
+  </div>
+
+  <div class="extra-container">
+    <div>
+      <label>
+        <input type="checkbox">Check All
+      </label>
+    </div>
+    <div>4 items left</div>
+  </div>
+
+  <div class="extra-container">
+    <div>
+      <button class="active">All</button>
+      <button>Active</button>
+      <button>Completed</button>
+    </div>
+
+    <div>
+      <button>Clear Completed</button>
+    </div>
+  </div>
+
+  <footer>
+    <small>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a
+        href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> licensed by <a
+        href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+    </small>
+  </footer>
+</div>
