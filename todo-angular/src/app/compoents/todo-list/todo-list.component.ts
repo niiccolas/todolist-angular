@@ -79,4 +79,8 @@ export class TodoListComponent implements OnInit {
     this.beforeEditCache = todo.title;
     todo.editing = true;
   }
+
+  remaining(): number {
+    return this.todos.filter(todo => !todo.completed).length;
+  }
 }
