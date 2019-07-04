@@ -11,7 +11,7 @@
       <div *ngIf="!todo.editing; else editingTodo" class="todo-item-label" (dblclick)="editTodo(todo)">{{ todo.title }}</div>
 
       <ng-template #editingTodo>
-        <input type="text" class="todo-item-edit" [(ngModel)]="todo.title" (blur)="doneEdit(todo)" (keyup.enter)="doneEdit(todo)" autofocus>
+        <input type="text" class="todo-item-edit" [(ngModel)]="todo.title" (blur)="doneEdit(todo)" (keyup.enter)="doneEdit(todo)" (keyup.escape)="cancelEdit(todo)" autofocus>
       </ng-template>
 
     </div>
