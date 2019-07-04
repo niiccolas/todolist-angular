@@ -37,8 +37,8 @@
       <button>Completed</button>
     </div>
 
-    <div>
-      <button>Clear Completed</button>
+    <div *ngIf="atLeastOneCompleted()">
+      <button (click)="clearCompleted()">Remove Completed</button>
     </div>
   </div>
 
