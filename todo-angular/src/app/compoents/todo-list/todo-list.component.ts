@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Todo } from '../../interfaces/todo';
 import { CompileTemplateMetadata } from '@angular/compiler';
 
 @Component({
