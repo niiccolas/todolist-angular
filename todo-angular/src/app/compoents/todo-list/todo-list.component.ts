@@ -61,6 +61,10 @@ export class TodoListComponent implements OnInit {
     this.todos = this.todos.filter(todo => todo.id !== id);
   }
 
+  doneEdit(todo: Todo): void {
+    todo.editing = false;
+  }
+
   editTodo(todo: Todo): void {
     todo.editing = true;
   }
